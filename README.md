@@ -72,4 +72,4 @@ We use the Magic tool to view the floorplan and for us to view it in magic we ne
         magic -T <location of techfile> lef read <loction of lef file> def read <location of floorplan def file>
 The above command can be used to view the floorplan in the Magic tool.
 
-![Screenshot](Images/fpd.png)
+![Screenshot](Images/fdp.png)
