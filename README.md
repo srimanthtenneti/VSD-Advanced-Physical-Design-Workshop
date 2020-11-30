@@ -62,4 +62,4 @@ In the floor planning stage we set some parameters and place plan the area of th
     
 ##### Running the floorplan
     run_floorplan is the command to run the floor plan
-![Screenshot](Images/fp.png)
+![Screenshot](Images/fp1.png)
