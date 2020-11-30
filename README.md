@@ -60,6 +60,14 @@ In the floor planning stage we set some parameters and place plan the area of th
     6. Place i/o pins :  This is to use the netlist to determine where a specific pin should be placed
     7. Power Distribution Network : This is very important to ensure all the components get enough power to function properly
     
-##### Running the floorplan
+#### Running the floorplan
     run_floorplan is the command to run the floor plan
 ![Screenshot](Images/fp1.png)
+#### Viewing the floorplan
+We use the Magic tool to view the floorplan and for us to view it in magic we need 3 files:
+1. Magic Tech file : sky130A.tech
+2. LEF file : merged.lef
+3. Def file of floorplan : picorv32a.floorplan.def
+
+        magic -T <location of techfile> lef read <loction of lef file> def read <location of floorplan def file>
+The above command can be used to view the floorplan in the Magic tool.
