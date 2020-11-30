@@ -73,3 +73,7 @@ We use the Magic tool to view the floorplan and for us to view it in magic we ne
 The above command can be used to view the floorplan in the Magic tool.
 
 ![Screenshot](Images/fdp.png)
+
+#### Running the Placement
+    run_placement command is used to run the placement 
+![Screenshot](Images/floorplan.png)
