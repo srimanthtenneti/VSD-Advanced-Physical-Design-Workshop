@@ -48,3 +48,18 @@ This workshop aims to give an idea on Physical Design using the 130nm Google Sky
 #### Running synthesis
     run_synthesis command synthesizes the design
 ![Screenshot](Images/Synth.png)
+
+## Day 2: Understand importance of good floorplan vs bad floorplan and introduction to library cells
+In the floor planning stage we set some parameters and place plan the area of the chip. The parameters we typically set are :
+
+    1. Die Area : The area of the chip
+    2. Core Area : Area for all the circutry
+    3. Core Utilization : It is the ratio of area of netlist to area of the core
+    4. Aspect Ratio : It is the ratio of width to height
+    5. Pre-placed Cells : These IP blocks have user defined locations and are placed in the chip before place and route.
+    6. Place i/o pins :  This is to use the netlist to determine where a specific pin should be placed
+    7. Power Distribution Network : This is very important to ensure all the components get enough power to function properly
+    
+##### Running the floorplan
+    run_floorplan is the command to run the floor plan
+![Screenshot](Images/fp.png)
