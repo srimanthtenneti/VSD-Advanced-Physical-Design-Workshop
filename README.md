@@ -77,3 +77,5 @@ The above command can be used to view the floorplan in the Magic tool.
 #### Running the Placement
     run_placement command is used to run the placement 
 ![Screenshot](Images/floorplan.png)
+ Also I did a small experiment with the parameters to look at the difference in placement. The above one is the design with all the default parameters and the one below is the design with the parameters prescribed in the workshop.
+![Screenshot](Images/18.png)
