@@ -81,3 +81,32 @@ The above command can be used to view the floorplan in the Magic tool.
  Also I did a small experiment with the parameters to look at the difference in placement. The above one is the design with all the default parameters and the one below is the design with the parameters prescribed in the workshop.
 
 ![Screenshot](Images/18.png)
+
+#### Standard Cell Design
+The typical standard cell design flow consists of 3 elements : 
+
+    1. Inputs - PDKs , DRC & LVS rules, SPICE models, library & user-defined specs
+    2. Design Steps - Circuit design, layout design, characterization
+    3. Outputs - CDL, GDSII, LEF, .cir
+    
+## Day 3: Design and characterize one library cell using Magic Layout tool and ngspice
+#### Spice Simulations (Pre-Layout)
+The spice simulations mainly consist of : 
+
+    1. Spice deck 
+    2. NGspice introduction
+    3. static behaviour evaluation 
+    
+##### Note:
+For information on the 16 Mask CMOS process do refer this PDF.
+
+    Link : https://www.vlsisystemdesign.com/wp-content/uploads/2017/07/16-mask-process.pdf
+    
+#### Lab
+For the lab we need to clone a repo for the designs
+
+    Link : git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+    
+After cloning the repo we need to go into the vsdstdcelldesign directory and view the sky130_inv.mag file using magic. 
+
+![Screenshot](Images/prelay.png)
