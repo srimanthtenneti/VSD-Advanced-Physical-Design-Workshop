@@ -176,3 +176,34 @@ After which we have to redo the floorplan and placement. Then we run the CTS usi
     run_cts
     
 ![Screenshot](Images/cts1.png) 
+
+Now for the timing analysis after CTS.
+
+ openroad
+ 
+We need to create a db file using .lef and .def. This is done using the following commands : 
+
+    read_lef ......./tmp/merged.lef
+    read_def ......./cts/picorv32a.cts.def
+    write_db picorv32_cts.db
+     
+## Day 5: Final steps for RTL2GDS
+
+Use the following commands before creating the power distribution network : 
+ 
+     openroad
+     read_db picorv32_cts.db  
+     read_liberty $::env(LIB_SYNTH_COMPLETE) 
+     link_design picorv32a
+     read_sdc ...../src/my_base.sdc
+     set_propagated_clock [all_clocks]
+     report_checks -path_delay min_max -format full_clock_expanded -digits 4
+
+For generating the power distribution network we use the following command : 
+
+    gen_pdn
+    
+After running the command the result will look something like this : 
+
+![Screenshot](Images/pdn.png) 
+
