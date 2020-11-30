@@ -123,3 +123,42 @@ We need to extract the the parasitics and characterize the design. We use the tk
 The extracted file looks like this : 
 
 ![Screenshot](Images/sp2.png)   
+
+The next step is running NGspice & this is done using the command : 
+
+    ngspice sky130_inv.spice and we have to plot y vs time a
+    
+The plot will look something like : 
+
+![Screenshot](Images/sp2.png) 
+
+The next step is to create a .lef file that will be used by the flow.
+
+## Day 4 : 4: Pre-layout timing analysis and importance of good clock tree
+#### Lef file generation
+To get the lef file we first need to modify the grid. This can be done from the tkcon window by using : 
+
+    grid 0.46um 0.34um 0.23um 0.17um
+    
+Now save the mag file and restart the magic tool. Then use the following command to generate the lef file : 
+
+     lef write
+     
+The above command generates a .lef file. Now copy the lef file into the picrorv32a directory using the following command : 
+
+    cp <path to the file> <path to the target location>
+    
+Also copy the .lib files in the same src folder for timing analysis (the .lib files can be found at libs folder of \vsdstdcelldesign).
+
+To include the cell in the design flow use the following command : 
+
+    set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]
+    
+After running design prep use the following commands before running synthesis. 
+
+    set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+    add_lefs -src $lefs
+    
+After completing the steps view the merged lef file.
+
+![Screenshot](Images/lef.png) 
