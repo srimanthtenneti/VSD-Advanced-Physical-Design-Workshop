@@ -207,3 +207,25 @@ After running the command the result will look something like this :
 
 ![Screenshot](Images/pdn.png) 
 
+The next step is running the Routing and this can be done via the command : 
+
+    run_routing
+    
+After routing the if we open the design in magic the result should look like :
+
+![Screenshot](Images/postr.png) 
+
+Now run the SPEF extractor to extract the parasitics.
+
+    cd SPEF_EXTRACTOR
+    python3 main.py <lef file path> <def file path>
+    
+For the final GDSII file run the following command : 
+
+    run_magic
+    
+## Acknowledgement
+### Kunal Ghosh, Co-founder (VSD Corp. Pvt. Ltd)
+### Nickson Jose, VLSI Engineer
+    
+
