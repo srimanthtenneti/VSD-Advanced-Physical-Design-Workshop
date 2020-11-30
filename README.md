@@ -110,3 +110,16 @@ For the lab we need to clone a repo for the designs
 After cloning the repo we need to go into the vsdstdcelldesign directory and view the sky130_inv.mag file using magic. 
 
 ![Screenshot](Images/prelay.png)
+
+##### Note : 
+We need to extract the the parasitics and characterize the design. We use the tkcon window and run the following commands:
+
+    1. extract all
+    2. ext2spice cthresh 0 rthresh 0
+    3. ext2spice
+ 
+![Screenshot](Images/spice.png)   
+
+The extracted file looks like this : 
+
+![Screenshot](Images/sp2.png)   
