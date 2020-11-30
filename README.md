@@ -162,3 +162,17 @@ After running design prep use the following commands before running synthesis.
 After completing the steps view the merged lef file.
 
 ![Screenshot](Images/lef.png) 
+
+Now we run a post synthesis analysis using OpenSTA using the command : 
+
+     sta pre_sta.conf
+     
+After the analysis we will now run the CTS (Clock Tree Synthesis) using the following commands : 
+
+    write_verilog ......../picorv32a.synthesis.v to update the synthesis
+
+After which we have to redo the floorplan and placement. Then we run the CTS using : 
+
+    run_cts
+    
+![Screenshot](Images/cts1.png) 
