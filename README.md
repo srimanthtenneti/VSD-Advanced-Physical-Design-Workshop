@@ -24,3 +24,23 @@ This workshop aims to give an idea on Physical Design using the 130nm Google Sky
 ### 5. Day 5: Final steps for RTL2GDS
     1.Routing and design rule check (DRC)
     2.PNR interactive flow tutorial
+
+## Tools used in the workshop
+    1.Yosys – for Synthesis
+    2.Magic – for Layout and Floorplanning
+    3.CTS - TritonCTS - Synthesizes the clock distribution network
+    4.NgSpice - for Characterisation
+    5.OpenSTA – Pre-layout and Post-layout Static timing analysis
+    
+## Day 1 : Inception of open-source EDA, OpenLANE and Sky130 PDK
+#### Introduction to the files
+1. Skywater-pdk – Contains all the foundry provided PDK related files
+2. Open_pdks – Contains scripts that are used to bridge the gap between closed-source and open-source PDK to EDA tool compatibility
+3. Sky130A – The open-source compatible PDK files
+#### Activating Open Lane & Preparing design
+
+##### Running Openlane
+    ./flow.tcl is the script which runs the OpenLANE flow and -interactive starts the flow in the interactive mode. 
+#### Preparing design
+    prep -design picorv32a
+![Screenshot](Images/prepdesign.png)
