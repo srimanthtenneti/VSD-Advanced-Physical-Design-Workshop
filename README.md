@@ -41,6 +41,10 @@ This workshop aims to give an idea on Physical Design using the 130nm Google Sky
 
 ##### Running Openlane
     ./flow.tcl is the script which runs the OpenLANE flow and -interactive starts the flow in the interactive mode. 
-#### Preparing design
+##### Preparing design
     prep -design picorv32a
 ![Screenshot](Images/prepdesign.png)
+
+#### Running synthesis
+    run_synthesis command synthesizes the design
+![Screenshot](Images/Synth.png)
