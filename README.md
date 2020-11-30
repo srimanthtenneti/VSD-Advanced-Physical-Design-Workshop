@@ -130,7 +130,7 @@ The next step is running NGspice & this is done using the command :
     
 The plot will look something like : 
 
-![Screenshot](Images/sp2.png) 
+![Screenshot](Images/sim.png) 
 
 The next step is to create a .lef file that will be used by the flow.
 
